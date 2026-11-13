@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UlosKita — katalog digital untuk mengenal ragam kain ulos Batak.">
+  <title>UlosKita — Katalog Ulos Batak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="UlosKita beranda"><span class="brand-mark">U</span><span>ulos<span class="brand-accent">kita</span></span></a>
+    <nav><a href="#katalog">Katalog</a><a href="#tentang">Tentang</a></nav>
+    <a class="saved-link" href="#katalog">♡ <span id="saved-count">0</span> disimpan</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">WARISAN BUDAYA BATAK</p>
+        <h1>Kenali cerita di balik setiap <em>ulos.</em></h1>
+        <p class="hero-description">Jelajahi ragam kain ulos, makna, dan penggunaannya dalam kehidupan masyarakat Batak.</p>
+        <a class="primary-button" href="#katalog">Jelajahi katalog <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi motif kain ulos" role="img">
+        <div class="woven woven-one"></div><div class="woven woven-two"></div>
+        <div class="hero-note"><span>01 / 08</span><strong>Warisan yang<br>terus hidup.</strong></div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="katalog">
+      <div class="section-heading">
+        <div><p class="eyebrow">TEMUKAN UL0S FAVORITMU</p><h2>Katalog Ulos</h2></div>
+        <p class="result-count" id="result-count">Memuat katalog…</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Cari nama atau makna ulos…" aria-label="Cari ulos"></label>
+        <select id="category-filter" aria-label="Filter kategori">
+          <option value="Semua">Semua kategori</option>
+          <option value="Adat">Adat</option><option value="Upacara">Upacara</option><option value="Kehidupan">Kehidupan</option>
+        </select>
+      </div>
+      <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Tidak ada ulos yang cocok. Coba kata kunci lain.</p>
+    </section>
+
+    <section class="about-section" id="tentang">
+      <div class="about-symbol">ᯤ</div>
+      <div><p class="eyebrow">TENTANG UL0SKITA</p><h2>Budaya dikenal,<br>warisan dijaga.</h2></div>
+      <p>UlosKita adalah mini proyek katalog digital untuk membantu pengguna mengenal beberapa jenis ulos Batak melalui informasi singkat yang mudah dijelajahi. Informasi pada proyek ini merupakan ringkasan edukatif dan dapat dikembangkan dengan sumber budaya yang tervalidasi.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">U</span><span>ulos<span class="brand-accent">kita</span></span></a><p>Mini project portofolio · Dibuat dengan HTML, CSS, dan JavaScript.</p><span>© <span id="year"></span> UlosKita</span></footer>
+
+  <dialog id="detail-dialog" class="detail-dialog">
+    <button class="dialog-close" id="dialog-close" aria-label="Tutup detail">×</button>
+    <div class="detail-pattern" id="detail-pattern"></div>
+    <div class="detail-content"><p class="eyebrow" id="detail-category"></p><h2 id="detail-name"></h2><p id="detail-description"></p><div class="detail-meta"><span>Makna</span><strong id="detail-meaning"></strong></div><div class="detail-meta"><span>Penggunaan</span><strong id="detail-use"></strong></div></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
